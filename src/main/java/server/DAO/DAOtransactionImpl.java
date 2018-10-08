@@ -30,24 +30,24 @@ public class DAOtransactionImpl implements TransactionDao {
 	@Override
 	public void addTransaction(Transaction transaction) {
 		try {
-			String sql = "INSERT INTO transactions (PATIENTID, PRODUCTID, DATE_TRANSACTION) VALUES (?, ?, ?)";
-			GeneratedKeyHolder generatedKeyHolder = new GeneratedKeyHolder();
-			jdbcTemplate.update(connection -> {
-				PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-				ps.setInt(1, transaction.getPatientId());
-				ps.setInt(2, transaction.getProductId());
-				ps.setDate(3, transaction.getDateTransaction());
-				return ps;
-			}, generatedKeyHolder);
-			transaction.setId(generatedKeyHolder.getKey().intValue());
-		} catch (Exception e){
+			String sql = "INSERT INTO transactions(PATIENTID, PRODUCTID, DATE_TRANSACTION) VALUES (?,?,?)";
+			jdbcTemplate.update(sql, transaction.getPatientId(), transaction.getProductId(), transaction.getDateTransaction());
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
 //		try {
-//			String sql = "INSERT INTO transactions(PATIENTID, PRODUCTID, DATE_TRANSACTION) VALUES (?,?,?)";
-//			jdbcTemplate.update(sql, transaction.getPatientId(), transaction.getProductId(), transaction.getDateTransaction());
-//		} catch (Exception e) {
+//			String sql = "INSERT INTO transactions (PATIENTID, PRODUCTID, DATE_TRANSACTION) VALUES (?, ?, ?)";
+//			GeneratedKeyHolder generatedKeyHolder = new GeneratedKeyHolder();
+//			jdbcTemplate.update(connection -> {
+//				PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+//				ps.setInt(1, transaction.getPatientId());
+//				ps.setInt(2, transaction.getProductId());
+//				ps.setDate(3, transaction.getDateTransaction());
+//				return ps;
+//			}, generatedKeyHolder);
+//			transaction.setId(generatedKeyHolder.getKey().intValue());
+//		} catch (Exception e){
 //			e.printStackTrace();
 //		}
 
