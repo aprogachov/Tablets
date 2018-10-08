@@ -9,13 +9,14 @@ import org.springframework.stereotype.Component;
 import server.DAO.DAOproductImpl;
 import server.DAO.ProductDao;
 import server.model.Product;
+import server.service.IProductService;
 import server.service.ProductService;
 
 @Component
 public class MenuProduct {
 
     @Autowired
-    private ProductService productService;
+    private IProductService iproductService;
 
     @Autowired
     private MenuMain menuMain;
@@ -39,23 +40,23 @@ public class MenuProduct {
                 case 1:
                     newProduct();
                     Product productMy = new Product(name1, StateId1);
-                    productService.addProduct(productMy);
+                    iproductService.addProduct(productMy);
                     System.out.println("\nProduct save: " + productMy);
                     break;
                 case 2:
                     System.out.println("Enter id Product:");
                     int id2 = sc.nextInt();
-                    Product another = productService.findById(id2);
+                    Product another = iproductService.findById(id2);
                     System.out.println("\nProduct found is: " + another.toString());
                     break;
                 case 3:
-                    List<Product> products = productService.findAllProducts();
+                    List<Product> products = iproductService.findAllProducts();
                     System.out.println("\n" + products);
                     break;
                 case 4:
                     System.out.println("Enter id Product change:");
                     int id3 = sc.nextInt();
-                    Product pproduct = productService.findById(id3);
+                    Product pproduct = iproductService.findById(id3);
                     System.out.println("\nProduct found is: " + pproduct.toString());
 
                     sc.nextLine();
@@ -68,14 +69,14 @@ public class MenuProduct {
 
                     pproduct.setName(name2);
                     pproduct.setStateId(stateId2);
-                    productService.updateProduct(pproduct);
+                    iproductService.updateProduct(pproduct);
                     break;
                 case 5:
                     System.out.println("Enter id Product delete:");
                     int id4 = sc.nextInt();
-                    Product delProduct = productService.findById(id4);
+                    Product delProduct = iproductService.findById(id4);
                     System.out.println("\nProduct found is: " + delProduct.toString());
-                    productService.deleteProduct(delProduct);
+                    iproductService.deleteProduct(delProduct);
                     break;
                 case 0:
                     menuMain.menu();

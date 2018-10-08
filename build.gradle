@@ -25,15 +25,6 @@ dependencies {
 
     compile group: 'org.liquibase', name: 'liquibase-core', version: '3.6.2'
 
-//    compile group: 'org.apache.poi', name: 'poi', version: '4.0.0'
-
-//    compile group: 'org.vibur', name: 'vibur-dbcp', version: '21.2'
-//    compile group: 'org.vibur', name: 'vibur-dbcp-hibernate5', version: '21.2'
-    compile group: 'com.googlecode.concurrentlinkedhashmap', name: 'concurrentlinkedhashmap-lru', version: '1.4.2'
-
-
-    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
-
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile group: 'org.mockito', name: 'mockito-core', version: '2.21.0'
 

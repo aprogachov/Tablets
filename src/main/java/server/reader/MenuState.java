@@ -10,13 +10,14 @@ import server.App;
 import server.DAO.DAOstateImpl;
 import server.DAO.StateDao;
 import server.model.State;
+import server.service.IStateService;
 import server.service.StateService;
 
 @Component
 public class MenuState {
 
     @Autowired
-    private StateService stateService;
+    private IStateService istateService;
 
     @Autowired
     private MenuMain menuMain;
@@ -40,23 +41,23 @@ public class MenuState {
                 case 1:
                     newState();
                     State stateMy = new State(name1, code1);
-                    stateService.addState(stateMy);
+                    istateService.addState(stateMy);
                     System.out.println("\nState save: " + stateMy);
                     break;
                 case 2:
                     System.out.println("Enter id State:");
                     int id2 = sc.nextInt();
-                    State another = stateService.findById(id2);
+                    State another = istateService.findById(id2);
                     System.out.println("\nState found is: " + another.toString());
                     break;
                 case 3:
-                    List<State> states = stateService.findAllStates();
+                    List<State> states = istateService.findAllStates();
                     System.out.println("\n" + states);
                     break;
                 case 4:
                     System.out.println("Enter id State change:");
                     int id3 = sc.nextInt();
-                    State pstate = stateService.findById(id3);
+                    State pstate = istateService.findById(id3);
                     System.out.println("\nState found is: " + pstate.toString());
 
                     sc.nextLine();
@@ -69,14 +70,14 @@ public class MenuState {
 
                     pstate.setCode(code2);
                     pstate.setName(name2);
-                    stateService.updateState(pstate);
+                    istateService.updateState(pstate);
                     break;
                 case 5:
                     System.out.println("Enter id State delete:");
                     int id4 = sc.nextInt();
-                    State delState = stateService.findById(id4);
+                    State delState = istateService.findById(id4);
                     System.out.println("\nState found is: " + delState.toString());
-                    stateService.deleteState(delState);
+                    istateService.deleteState(delState);
                     break;
                 case 0:
                     menuMain.menu();

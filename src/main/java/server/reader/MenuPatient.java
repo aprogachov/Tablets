@@ -7,13 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import server.DAO.DAOpatientImpl;
 import server.model.Patient;
+import server.service.IPatientService;
 import server.service.PatientService;
 
 @Component
 public class MenuPatient {
 
     @Autowired
-    private PatientService patientService;
+    private IPatientService ipatientService;
 
     @Autowired
     private MenuMain menuMain;
@@ -37,23 +38,23 @@ public class MenuPatient {
                 case 1:
                     newPatient();
                     Patient patientMy = new Patient(phone1, StateId1);
-                    patientService.addPatient(patientMy);
+                    ipatientService.addPatient(patientMy);
                     System.out.println("\nPatient save: " + patientMy);
                     break;
                 case 2:
                     System.out.println("Enter id Patient:");
                     int id2 = sc.nextInt();
-                    Patient another = patientService.findById(id2);
+                    Patient another = ipatientService.findById(id2);
                     System.out.println("\nPatient found is: " + another.toString());
                     break;
                 case 3:
-                    List<Patient> patients = patientService.findAllPatients();
+                    List<Patient> patients = ipatientService.findAllPatients();
                     System.out.println("\n" + patients);
                     break;
                 case 4:
                     System.out.println("Enter id Patient change:");
                     int id3 = sc.nextInt();
-                    Patient ppatient = patientService.findById(id3);
+                    Patient ppatient = ipatientService.findById(id3);
                     System.out.println("\nPatient found is: " + ppatient.toString());
 
                     sc.nextLine();
@@ -66,14 +67,14 @@ public class MenuPatient {
 
                     ppatient.setPhone(phone2);
                     ppatient.setStateId(stateId2);
-                    patientService.updatePatient(ppatient);
+                    ipatientService.updatePatient(ppatient);
                     break;
                 case 5:
                     System.out.println("Enter id Patient delete:");
                     int id4 = sc.nextInt();
-                    Patient delPatient = patientService.findById(id4);
+                    Patient delPatient = ipatientService.findById(id4);
                     System.out.println("\nPatient found is: " + delPatient.toString());
-                    patientService.deletePatient(delPatient);
+                    ipatientService.deletePatient(delPatient);
                     break;
                 case 0:
                     menuMain.menu();
