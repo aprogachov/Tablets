@@ -4,14 +4,9 @@ import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
-import server.App;
-import server.DAO.DAOstateImpl;
-import server.DAO.StateDao;
 import server.model.State;
 import server.service.IStateService;
-import server.service.StateService;
 
 @Component
 public class MenuState {

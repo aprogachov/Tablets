@@ -67,15 +67,6 @@ public class DAOtransactionImpl implements TransactionDao {
 		return transactions;
 	}
 
-	@Override
-	public void updateTransaction(Transaction transaction) {
-		try {
-			String sql = "UPDATE transactions SET PATIENTID=?, PRODUCTID=?, DATE_TRANSACTION=? WHERE TRANSACTION_ID=?";
-			jdbcTemplate.update(sql, transaction.getPatientId(), transaction.getProductId(), transaction.getDateTransaction(), transaction.getId());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	@Override
 	public void deleteTransaction(Transaction transaction) {

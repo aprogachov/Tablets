@@ -8,6 +8,5 @@ public interface ITransactionService {
     void addTransaction(Transaction transaction)throws Exception ;
     Transaction findById(int transactionId);
     List findAllTransactions();
-//    void updateTransaction(Transaction transaction);
     void deleteTransaction(Transaction transaction);
 }

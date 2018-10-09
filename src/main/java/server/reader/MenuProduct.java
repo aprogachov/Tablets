@@ -4,10 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
-import server.DAO.DAOproductImpl;
-import server.DAO.ProductDao;
 import server.model.Product;
 import server.service.IProductService;
 import server.service.ProductService;

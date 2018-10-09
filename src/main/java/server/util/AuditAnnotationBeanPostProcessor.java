@@ -61,12 +61,24 @@ public class AuditAnnotationBeanPostProcessor implements BeanPostProcessor {
                         iauditOperationService.addAuditOperation(auditOperation);
                         System.out.println(auditOperation);
                         return result;
-                    } catch (Exception e) {
+//                    } catch (Exception e) {
+//                        System.out.println("FALSE");
+//                        auditOperation.setStatus("FALSE");
+//                        iauditOperationService.addAuditOperation(auditOperation);
+//                        System.out.println(auditOperation);
+//                        throw e;
+
+                    } catch (InvocationTargetException ite) {
+                        if (ite.getCause() instanceof StateException) {
+                            StateException cause = (StateException) ite.getCause();
+                            System.out.println(cause);
+//                            cause.printStackTrace();
+                        }
                         System.out.println("FALSE");
                         auditOperation.setStatus("FALSE");
                         iauditOperationService.addAuditOperation(auditOperation);
                         System.out.println(auditOperation);
-                        throw e;
+                        throw ite;
                     }
                 }
                 else {

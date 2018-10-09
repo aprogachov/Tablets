@@ -45,15 +45,6 @@ public class DAOauditOperationImpl implements AuditOperationDao {
 		return auditOperations;
 	}
 
-	@Override
-	public void updateAuditOperation(AuditOperation auditOperation) {
-		try {
-			String sql = "UPDATE auditOperations SET DATE_AUDIT=?, STATUS=?, ACTION=? WHERE AUDIT_ID=?";
-			jdbcTemplate.update(sql, auditOperation.getDateAuditOperation(), auditOperation.getStatus(), auditOperation.getAction(), auditOperation.getId());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	@Override
 	public void deleteAuditOperation(AuditOperation auditOperation) {

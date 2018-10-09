@@ -2,10 +2,8 @@ package server.reader;
 
 import java.util.List;
 import java.util.Scanner;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import server.DAO.DAOpatientImpl;
 import server.model.Patient;
 import server.service.IPatientService;
 import server.service.PatientService;

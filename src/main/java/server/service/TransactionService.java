@@ -32,14 +32,14 @@ public class TransactionService implements ITransactionService  {
 
 	@Override
 	@Transactional(propagation=Propagation.REQUIRES_NEW)
-	@Audit(action = "Sale")
+	@Audit(action = "SALE")
 	public void addTransaction(Transaction transaction) throws Exception {
 		Patient patient = patientDao.findById(transaction.getPatientId());
 		Product product = productDao.findById(transaction.getProductId());
 		if (patient.getStateId() == product.getStateId()){
 			transactionDao.addTransaction(transaction);
 		} else
-			throw new StateException("The product is not for sale in this state");
+			throw new StateException("THE PRODUCT IS NOT FOR SALE IN THIS STATE");
 	}
 
 	@Override
@@ -58,10 +58,6 @@ public class TransactionService implements ITransactionService  {
 		return transactions;
 	}
 
-//	@Transactional(propagation=Propagation.REQUIRES_NEW)
-//	public void updateTransaction(Transaction transaction) {
-//		transactionDao.updateTransaction(transaction);
-//	}
 
 	@Override
 	@Transactional(propagation=Propagation.REQUIRES_NEW)

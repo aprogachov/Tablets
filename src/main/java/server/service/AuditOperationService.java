@@ -43,10 +43,6 @@ public class AuditOperationService implements IAuditOperationService {
 		return auditOperations;
 	}
 
-//	@Transactional(propagation=Propagation.REQUIRES_NEW)
-//	public void updateAuditOperation(AuditOperation auditOperation) {
-//		auditOperationDao.updateAuditOperation(auditOperation);
-//	}
 
 	@Override
 	@Transactional(propagation=Propagation.REQUIRES_NEW)

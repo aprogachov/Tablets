@@ -4,15 +4,10 @@ import java.util.Calendar;
 import java.sql.Date;
 import java.util.List;
 import java.util.Scanner;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import server.DAO.DAOtransactionImpl;
-import server.DAO.TransactionDao;
-import server.exception.StateException;
 import server.model.Transaction;
 import server.service.ITransactionService;
-import server.service.TransactionService;
 
 @Component
 public class MenuTransaction {
@@ -47,6 +42,7 @@ public class MenuTransaction {
                         System.out.println("\nTransaction save: " + transactionMy);
                     } catch (Exception e) {
                         e.printStackTrace();
+//                        System.out.println(e);
                     }
                     break;
                 case 2:
@@ -61,30 +57,7 @@ public class MenuTransaction {
                         System.out.println(transaction.toString());
                     }
                     break;
-//                case 4:
-//                    System.out.println("Enter id Transaction change:");
-//                    int id3 = sc.nextInt();
-//                    Transaction ptransaction = transactionService.findById(id3);
-//                    System.out.println("\nTransaction found is: " + ptransaction.toString());
-//
-//                    sc.nextLine();
-//                    System.out.println("Your new transaction PatientId: ");
-//                    int patientId2 = sc.nextInt();
-//                    System.out.println("Your new transaction ProductId: ");
-//                    int productId2 = sc.nextInt();
-//
-//                    System.out.println("Your Transaction Date: ");
-// //                    dateTransaction1 = Calendar.getInstance().getTime();
-//                    dateTransaction1 = new Date(System.currentTimeMillis());
-//
-//                    System.out.println("You enter: PatientId=" + patientId2 +
-//                            "; ProductId=" + productId2 + " Date: " + dateTransaction2 + "\n");
-//
-//                    ptransaction.setPatientId(patientId2);
-//                    ptransaction.setProductId(productId2);
-//                    ptransaction.setDateTransaction(dateTransaction2);
-//                    transactionService.updateTransaction(ptransaction);
-//                    break;
+
                 case 5:
                     System.out.println("Enter id Transaction delete:");
                     int id4 = sc.nextInt();
