@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import com.tablet.model.AuditOperation;
+import com.modelsale.model.AuditOperation;
 import com.tablet.service.IAuditOperationService;
 
 @Component

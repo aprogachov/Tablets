@@ -1,6 +1,6 @@
 package com.tablet.DAO;
 
-import com.tablet.model.Product;
+import com.modelsale.model.Product;
 
 import java.util.List;
 

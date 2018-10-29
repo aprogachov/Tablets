@@ -1,6 +1,6 @@
 package com.tablet.mapper;
 
-import com.tablet.model.Transaction;
+import com.modelsale.model.Transaction;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 

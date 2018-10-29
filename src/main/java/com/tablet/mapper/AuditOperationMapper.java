@@ -1,6 +1,6 @@
 package com.tablet.mapper;
 
-import com.tablet.model.AuditOperation;
+import com.modelsale.model.AuditOperation;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 

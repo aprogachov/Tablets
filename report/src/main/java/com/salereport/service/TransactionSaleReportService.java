@@ -3,18 +3,20 @@ package com.salereport.service;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.springframework.stereotype.Service;
-import com.tablet.model.Transaction;
+import com.modelsale.model.Transaction;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
 import java.util.List;
 
 @Service
 public class TransactionSaleReportService implements ITransactionSaleReportService {
 
-     @Override
+    @Override
     public void excelReport(List<Transaction> listSaleTransaction) throws IOException {
+
         HSSFWorkbook workbook = new HSSFWorkbook();
         Sheet sheet = workbook.createSheet("SalesTransaction");   //создаем лист
 

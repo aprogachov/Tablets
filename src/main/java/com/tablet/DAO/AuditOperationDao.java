@@ -1,6 +1,6 @@
 package com.tablet.DAO;
 
-import com.tablet.model.AuditOperation;
+import com.modelsale.model.AuditOperation;
 import java.util.List;
 
 public interface AuditOperationDao {

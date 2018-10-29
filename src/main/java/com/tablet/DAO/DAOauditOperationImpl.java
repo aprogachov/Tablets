@@ -1,6 +1,6 @@
 package com.tablet.DAO;
 
-import com.tablet.model.AuditOperation;
+import com.modelsale.model.AuditOperation;
 import com.tablet.mapper.AuditOperationMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;

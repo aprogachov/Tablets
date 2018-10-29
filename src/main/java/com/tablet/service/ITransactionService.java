@@ -1,6 +1,6 @@
 package com.tablet.service;
 
-import com.tablet.model.Transaction;
+import com.modelsale.model.Transaction;
 
 import java.util.List;
 

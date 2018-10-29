@@ -5,7 +5,7 @@ import com.tablet.util.Audit;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import com.tablet.model.AuditOperation;
+import com.modelsale.model.AuditOperation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

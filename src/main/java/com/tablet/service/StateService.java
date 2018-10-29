@@ -1,7 +1,7 @@
 package com.tablet.service;
 
 import com.tablet.DAO.StateDao;
-import com.tablet.model.State;
+import com.modelsale.model.State;
 import com.tablet.util.Audit;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

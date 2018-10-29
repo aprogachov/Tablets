@@ -1,6 +1,6 @@
 package com.tablet.DAO;
 
-import com.tablet.model.Transaction;
+import com.modelsale.model.Transaction;
 import com.tablet.mapper.TransactionMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;

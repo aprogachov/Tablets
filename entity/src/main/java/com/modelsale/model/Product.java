@@ -1,4 +1,4 @@
-package com.tablet.model;
+package com.modelsale.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,15 +7,15 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class State {
+public class Product {
     
     private int id;
-    private String code;
     private String name;
+    private int stateId;
 
-    public State(String code, String name) {
-        this.code = code;
+    public Product(String name, int stateId) {
         this.name = name;
+        this.stateId = stateId;
     }
 
 }

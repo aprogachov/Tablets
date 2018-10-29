@@ -1,4 +1,4 @@
-package com.tablet.model;
+package com.modelsale.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

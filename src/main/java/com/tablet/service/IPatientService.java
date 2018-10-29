@@ -1,6 +1,6 @@
 package com.tablet.service;
 
-import com.tablet.model.Patient;
+import com.modelsale.model.Patient;
 
 import java.util.List;
 

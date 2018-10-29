@@ -1,6 +1,6 @@
 package com.tablet.DAO;
 
-import com.tablet.model.State;
+import com.modelsale.model.State;
 
 import java.util.List;
 

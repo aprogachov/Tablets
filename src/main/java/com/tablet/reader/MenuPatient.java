@@ -3,7 +3,7 @@ package com.tablet.reader;
 import java.util.List;
 import java.util.Scanner;
 
-import com.tablet.model.Patient;
+import com.modelsale.model.Patient;
 import com.tablet.service.IPatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

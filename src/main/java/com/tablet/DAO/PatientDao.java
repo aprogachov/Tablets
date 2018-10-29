@@ -1,11 +1,9 @@
 package com.tablet.DAO;
 
-import com.tablet.model.Patient;
-import org.springframework.stereotype.Component;
+import com.modelsale.model.Patient;
 
 import java.util.List;
 
-@Component
 public interface PatientDao {
 
     void addPatient(Patient patient);

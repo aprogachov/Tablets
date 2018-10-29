@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import com.tablet.model.Product;
+import com.modelsale.model.Product;
 import com.tablet.service.IProductService;
 
 @Component

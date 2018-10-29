@@ -1,6 +1,6 @@
 package com.salereport.mapper;
 
-import com.tablet.model.Transaction;
+import com.modelsale.model.Transaction;
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;

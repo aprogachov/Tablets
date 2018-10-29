@@ -6,7 +6,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import com.tablet.exception.StateException;
-import com.tablet.model.AuditOperation;
+import com.modelsale.model.AuditOperation;
 import com.tablet.service.IAuditOperationService;
 
 import java.lang.annotation.Annotation;

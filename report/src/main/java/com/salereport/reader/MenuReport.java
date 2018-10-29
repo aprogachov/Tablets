@@ -2,7 +2,7 @@ package com.salereport.reader;
 
 import com.salereport.mapper.TransactionSaleMapper;
 import com.salereport.service.ITransactionSaleReportService;
-import com.tablet.model.Transaction;
+import com.modelsale.model.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -66,5 +66,6 @@ public class MenuReport {
             ioe.printStackTrace();
         }
     }
+
 
 }

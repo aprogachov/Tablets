@@ -1,2 +1,3 @@
 rootProject.name = 'task3-tablets-2'
 include 'report'
+include 'entity'

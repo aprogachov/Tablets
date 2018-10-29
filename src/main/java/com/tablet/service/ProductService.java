@@ -1,6 +1,6 @@
 package com.tablet.service;
 
-import com.tablet.model.Product;
+import com.modelsale.model.Product;
 import com.tablet.util.Audit;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

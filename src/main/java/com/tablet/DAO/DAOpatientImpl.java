@@ -1,7 +1,7 @@
 package com.tablet.DAO;
 
 import com.tablet.mapper.PatientMapper;
-import com.tablet.model.Patient;
+import com.modelsale.model.Patient;
 import org.springframework.stereotype.Repository;
 
 import org.springframework.beans.factory.annotation.Autowired;

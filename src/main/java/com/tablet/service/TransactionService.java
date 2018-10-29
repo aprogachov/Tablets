@@ -1,7 +1,7 @@
 package com.tablet.service;
 
-import com.tablet.model.Patient;
-import com.tablet.model.Transaction;
+import com.modelsale.model.Patient;
+import com.modelsale.model.Transaction;
 import com.tablet.util.Audit;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -10,7 +10,7 @@ import com.tablet.DAO.PatientDao;
 import com.tablet.DAO.ProductDao;
 import com.tablet.DAO.TransactionDao;
 import com.tablet.exception.StateException;
-import com.tablet.model.Product;
+import com.modelsale.model.Product;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
