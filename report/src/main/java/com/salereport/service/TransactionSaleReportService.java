@@ -1,14 +1,16 @@
 package com.salereport.service;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.salereport.mapper.TransactionSaleMapper;
 import com.modelsale.model.Transaction;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
 import java.util.List;
 
 @Service
@@ -17,7 +19,7 @@ public class TransactionSaleReportService implements ITransactionSaleReportServi
     @Override
     public void excelReport(List<Transaction> listSaleTransaction) throws IOException {
 
-        HSSFWorkbook workbook = new HSSFWorkbook();
+        XSSFWorkbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet("SalesTransaction");   //создаем лист
 
         Row titleRow = sheet.createRow(0);   //создаем строку заголовка

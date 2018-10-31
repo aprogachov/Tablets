@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 import java.util.List;
 
-@Component
 public interface TransactionSaleMapper {
     List<Transaction> getTransactions(@Param("dateFrom") Date dateFrom, @Param("dateBefore") Date dateBefore);
 }

@@ -1,6 +1,9 @@
 package com.salereport;
 
+import com.salereport.mapper.TransactionSaleMapper;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.mapper.MapperFactoryBean;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,4 +66,10 @@ public class ReportConfig {
         return sqlSessionFactoryBean;
     }
 
+    @Bean
+    public MapperFactoryBean<TransactionSaleMapper> saleMapperFactory(SqlSessionFactory sqlSessionFactory) throws Exception {
+        MapperFactoryBean<TransactionSaleMapper> factoryBean = new MapperFactoryBean<>(TransactionSaleMapper.class);
+        factoryBean.setSqlSessionFactory(sqlSessionFactory);
+        return factoryBean;
+    }
 }

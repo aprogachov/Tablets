@@ -35,7 +35,7 @@ dependencies {
 jar {
     baseName = 'report'
     manifest {
-        attributes 'Main-Class': 'com.salereport.AppReport'
+        attributes 'Main-Class': 'com.salereport.ReportMain'
     }
     from {
         configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }

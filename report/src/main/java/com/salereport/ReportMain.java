@@ -11,16 +11,8 @@ public class ReportMain {
     public static void main(String[] args) throws IOException {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ReportConfig.class);
-
         context.getBean(MenuReport.class).menu();
 
-//        TransactionSaleReportService tSaleReport = context.getBean(TransactionSaleReportService.class);
-//        try {
-//            tSaleReport.excelReport();
-//        } catch (ParseException pe) {
-//             pe.printStackTrace();
-//        }
-
-        context.close();
+    context.close();
     }
 }

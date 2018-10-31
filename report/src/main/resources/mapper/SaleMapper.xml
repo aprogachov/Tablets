@@ -15,11 +15,11 @@
         T.TRANSACTION_ID as TRANSACTION_ID,
         T.DATE_TRANSACTION as DATE_TRANSACTION,
         T.PATIENTID as PATIENTID,
-        T.PRODUCTID as PATIENTID
+        T.PRODUCTID as PRODUCTID
 
         FROM TRANSACTIONS T
 
-        WHERE date BETWEEN #{dateFrom} and #{dateBefore}
+        WHERE DATE_TRANSACTION BETWEEN #{dateFrom} and #{dateBefore}
     </select>
 
 </mapper>
